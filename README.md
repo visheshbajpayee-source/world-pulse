@@ -224,17 +224,4 @@ These are not required but will distinguish exceptional submissions:
 - ♿ Achieve a Lighthouse Accessibility score of 95+
 - 🌐 Add a language selector that changes UI text (English / French / Spanish) using a JSON i18n approach
 
----
 
-## 👨‍💼 Mentor Notes
-
-> For reviewers and mentors — here's what to look for:
-> - Are API calls centralized in `api.js` or scattered everywhere?
-> - Is the debounce implemented manually (shows understanding) or just a `setTimeout` hack?
-> - Does the app handle all three API error states: network failure, empty response, and rate limiting?
-> - Is `Promise.all()` used to fetch weather + news + holidays in parallel, or are they sequential (a common beginner mistake)?
-> - Does dark mode actually use CSS variables or is it hardcoded toggle of colors?
-
----
-
-*Built with ❤️ as an intern training project. Happy coding!*
