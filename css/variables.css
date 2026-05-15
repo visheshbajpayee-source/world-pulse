@@ -1,6 +1,32 @@
 :root {
     --font-main: "Poppins", sans-serif;
-    --card-bg: rgba(255, 255, 255, 0.8);
-    --border-color: rgba(17, 24, 39, 0.1);
+    
 
+    --body-bg: rgb(244, 247, 251);                  
+    --card-bg: rgba(255, 255, 255, 0.75);          
+    --border-color: rgba(15, 23, 42, 0.08);       
+
+    --text-main: rgb(15, 23, 42);                   
+    --text-muted: rgb(100, 116, 139);               
+
+    --primary: rgb(37, 99, 235);                   
+    --primary-dark: rgb(29, 78, 216);               
+
+    --shadow-a: 0 10px 25px rgba(15, 23, 42, 0.05);   
+    --shadow-b: 0 20px 48px rgba(15, 23, 42, 0.1);   
+}
+
+body.dark {
+    --body-bg: rgb(11, 17, 32);                     
+    --card-bg: rgba(30, 41, 59, 0.7);               
+    --border-color: rgba(255, 255, 255, 0.06);     
+
+    --text-main: rgb(241, 245, 249);                
+    --text-muted: rgb(148, 163, 184);               
+
+    --primary: rgb(96, 165, 250);                   
+    --primary-dark: rgb(59, 130, 246);              
+
+    --shadow-a: 0 10px 25px rgba(0, 0, 0, 0.3);
+    --shadow-b: 0 20px 48px rgba(0, 0, 0, 0.45);
 }
