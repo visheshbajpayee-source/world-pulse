@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Pulse</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/components.css">
     <link rel="stylesheet" href="./css/layout.css">
@@ -43,7 +47,7 @@
             <form id="searchForm" class="search-form" role="search">
                 <label for="countryInput">Search country</label>
 
-                <input id="countryInput" type="search" placeholder="Example: India, Japan, Canada" />
+                <input id="countryInput" type="search" placeholder="Example: India, Japan, Canada" autocomplete="off" />
 
                 <button type="submit" class="primary-btn">Search</button>
             </form>
@@ -88,17 +92,9 @@
     </main>
 
     <footer class="site-footer">
-        <p>Built with pure HTML, CSS and JavaScript.</p>
+        <p>Built with 💀</p>
     </footer>
 
-    <template id="newsCardTemplate">
-        <article class="news-card">
-            <h3 class="news-title"></h3>
-            <p class="news-source"></p>
-            <p class="news-date"></p>
-            <a class="news-link" target="_blank" rel="noopener noreferrer">Read More</a>
-        </article>
-    </template>
 
 </body>
 
