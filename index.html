@@ -5,25 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Pulse</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/animations.css">
-    <link rel="stylesheet" href="/css/components.css">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/variables.css">
 
-    <script src="/js/main.js" defer></script>
+    <script src="./js/main.js" defer></script>
 </head>
 
 <body>
     <header class="site-header">
         <nav class="navbar">
-            <span class="logo-icon">🌍</span>
-            <span>WorldPulse</span>
+            <a href="#" class="logo">
+                <span class="logo-icon">🌍</span>
+                <span>WorldPulse</span>
             </a>
 
             <button id="themeToggle" class="theme-toggle" type="button">
@@ -35,15 +33,73 @@
     <main class="main">
         <section class="hero-section">
             <p class="eyebrow">Real-time global explorer</p>
-            <h1>Explore any country instantly</h1>
+
+            <h1 id="heroTitle">Explore any country instantly</h1>
+
             <p class="hero-text">
                 Search a country and get its weather, news, public holidays and a random fun fact.
             </p>
-            <form id="searchForm" class="search-form">
-                <labe>Search country</label>
-                    <input type="search" placeholder="Example: India, Japan, Canada" />
-                    <button type="submit">Search</button>
+
+            <form id="searchForm" class="search-form" role="search">
+                <label for="countryInput">Search country</label>
+
+                <input id="countryInput" type="search" placeholder="Example: India, Japan, Canada" />
+
+                <button type="submit" class="primary-btn">Search</button>
             </form>
+
+            <ul id="suggestionsList" class="suggestions-list"></ul>
+
+            <div class="history-wrapper">
+                <div class="history-header">
+                    <h2>Recent Searches</h2>
+                    <button id="clearHistoryBtn" class="text-btn" type="button">Clear</button>
+                </div>
+
+                <div id="historyChips" class="history-chips"></div>
+            </div>
+        </section>
+
+        <section id="loadingSection" class="loading-section hidden">
+            <div class="spinner"></div>
+            <p>Loading dashboard...</p>
+        </section>
+
+        <section id="errorSection" class="error-section hidden"></section>
+
+        <section id="dashboardSection" class="dashboard-grid hidden">
+            <article id="countryPanel" class="dashboard-card country-panel" data-card="country"></article>
+
+            <article id="weatherPanel" class="dashboard-card" data-card="weather"></article>
+
+            <article id="holidayPanel" class="dashboard-card" data-card="holidays"></article>
+
+            <article id="factPanel" class="dashboard-card" data-card="fact"></article>
+        </section>
+
+        <section id="newsSection" class="news-section hidden">
+            <div class="section-heading">
+                <p class="eyebrow">Headlines</p>
+                <h2 id="newsTitle">Latest News</h2>
+            </div>
+
+            <div id="newsGrid" class="news-grid"></div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <p>Built with pure HTML, CSS and JavaScript.</p>
+    </footer>
+
+    <template id="newsCardTemplate">
+        <article class="news-card">
+            <h3 class="news-title"></h3>
+            <p class="news-source"></p>
+            <p class="news-date"></p>
+            <a class="news-link" target="_blank" rel="noopener noreferrer">Read More</a>
+        </article>
+    </template>
+
 </body>
+
 </html>
