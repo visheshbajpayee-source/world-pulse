@@ -24,3 +24,4 @@ themeToggle.addEventListener("click", () => {
 
   localStorage.setItem("theme", next);
 });
+
